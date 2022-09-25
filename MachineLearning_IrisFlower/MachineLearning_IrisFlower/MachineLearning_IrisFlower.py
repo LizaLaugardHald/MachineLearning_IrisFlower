@@ -14,3 +14,4 @@ file.close()
 
 print(csvreader.shape)
 print(csvreader.keys)
+print(csvreader.info())
