@@ -1,17 +1,30 @@
 #import csv
 import pandas as pd
 
-file = open("C:\\Users\\Andreas\\Documents\\GitHub\\MachineLearning_IrisFlower\\MachineLearning_IrisFlower\\Data\\iris.csv")
+def filereader():
+    return pd.read_csv("C:\\Users\\Andreas\\Documents\\GitHub\\MachineLearning_IrisFlower\\MachineLearning_IrisFlower\\Data\\iris.csv")
 
-type(file)
-csvreader = pd.read_csv(file)
-    
-print("\nData Type:")
-print(type(file))
-print(csvreader.head(3))
 
-file.close()
+iris = filereader() 
 
-print(csvreader.shape)
-print(csvreader.keys)
-print(csvreader.info())
+def irishead():
+    print(iris.head(3))
+
+
+def irisshape():
+    print(iris.shape)
+
+def iriskey():
+    print(iris.keys)
+
+def irisinfo():
+    print(iris.info())
+
+
+irishead()
+irisshape()
+iriskey()
+irisinfo()
+
+
+
