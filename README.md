@@ -10,4 +10,4 @@ This program is developed to practice machine learning on a dataset of iris flow
 4. Scikit-learn
  
 ## How to run the program
-The program is not finished yet.
+The program is not finished yet. More coming soon. 
