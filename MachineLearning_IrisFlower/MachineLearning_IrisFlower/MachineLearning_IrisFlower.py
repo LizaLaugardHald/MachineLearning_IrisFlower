@@ -3,6 +3,7 @@ import numpy as np
 from scipy import sparse
 
 #https://www.w3resource.com/machine-learning/scikit-learn/iris/index.php
+#Jeg kom til Step 1 i "Visualization - Iris flower data set [16 exercises with solution]"
 
 def FileReader():
     return pd.read_csv("C:\\Users\\Andreas\\Documents\\GitHub\\MachineLearning_IrisFlower\\MachineLearning_IrisFlower\\Data\\iris.csv")
