@@ -60,7 +60,18 @@ def NewDataframe():
     print("After removing id column:")
     print(new_irisdata.head()) 
 
-NewDataframe()
+def AccessCells():
+    print("Original Data:")
+    print(iris.head())
+    new_irisdata = iris.drop('Id',axis=1)
+    print("After removing id column:")
+    print(new_irisdata.head()) 
+    x = iris.iloc[:, [1, 2, 3, 4]].values
+    print(x) 
+
+AccessCells()
+
+#NewDataframe()
 
 
 #ObservationsSpecies()         
