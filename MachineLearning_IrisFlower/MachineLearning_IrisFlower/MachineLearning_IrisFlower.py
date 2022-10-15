@@ -2,34 +2,65 @@ import pandas as pd
 import numpy as np
 from scipy import sparse
 
-def filereader():
+#https://www.w3resource.com/machine-learning/scikit-learn/iris/index.php
+
+def FileReader():
     return pd.read_csv("C:\\Users\\Andreas\\Documents\\GitHub\\MachineLearning_IrisFlower\\MachineLearning_IrisFlower\\Data\\iris.csv")
 
 
-iris = filereader() 
+iris = FileReader() 
 
-def irishead():
+def IrisHead():
     print(iris.head(3))
 
 
-def irisshape():
+def IrisShape():
     print(iris.shape)
 
-def iriskey():
+def IrisKey():
     print(iris.keys)
 
-def irisinfo():
+def IrisInfo():
     print(iris.info())
 
+def IrisQuantile():
+    print(iris.quantile(q=0.5, axis=0, numeric_only=True, interpolation='linear'))
+
+def IrisStandarddeviation():
+    print(iris.std())
+
+def IrisMean():
+    print(iris.mean())
+
+def IrisDescribe():
+    print(iris.describe())
+
+IrisDescribe()
+
+#IrisMean()
+
+
+#IrisStandarddeviation()
+
+#IrisQuantile()
 
 #irishead()
-#irisshape()
-#iriskey()
-#irisinfo()
 
-arr = np.eye(4)
-print("Array...\n", arr)
+#iris.quantile(
+#    q=0.5,                      # The percentile to calculate
+#    axis=0,                     # The axis to calculate the percentile on
+#    numeric_only=True,          # To calculate only for numeric columns
+#    interpolation='linear'      # The type of interpolation to use when the quantile is between 2 values
+#)
 
-sparse_matrix = sparse.csr_matrix(arr)
-print(sparse_matrix)
+
+#IrisShape()
+#IrisKey()
+#IrisInfo()
+
+#arr = np.eye(4)
+#print("Array...\n", arr)
+
+#sparse_matrix = sparse.csr_matrix(arr)
+#print(sparse_matrix)
 
