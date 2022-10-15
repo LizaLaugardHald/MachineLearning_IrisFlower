@@ -52,8 +52,18 @@ def ObservationsSpecies():
     print("Amount of setosa = " + str(setosa)) 
     print("Amount of versicolor = " + str(versicolor)) 
     print("Amount of virginica = " + str(virginica))
-        
-ObservationsSpecies()         
+
+def NewDataframe():
+    print("Original Data:")
+    print(iris.head())
+    new_irisdata = iris.drop('Id',axis=1)
+    print("After removing id column:")
+    print(new_irisdata.head()) 
+
+NewDataframe()
+
+
+#ObservationsSpecies()         
 
 #IrisDescribe()
 
