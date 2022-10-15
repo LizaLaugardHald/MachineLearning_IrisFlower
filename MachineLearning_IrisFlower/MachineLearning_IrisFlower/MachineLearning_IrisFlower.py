@@ -35,7 +35,29 @@ def IrisMean():
 def IrisDescribe():
     print(iris.describe())
 
-IrisDescribe()
+def ObservationsSpecies():
+    setosa = 0
+    versicolor = 0
+    virginica = 0
+    for x, row in iris.iterrows():
+        if row['Species'] == "Iris-setosa":
+            setosa = setosa +1
+        elif row["Species"] == "Iris-versicolor":
+            versicolor = versicolor +1
+        elif row["Species"] == "Iris-virginica":
+            virginica = virginica +1
+        else: 
+            print("An erros has occured!")
+    print("Observations of each species:")
+    print("Amount of setosa = " + str(setosa)) 
+    print("Amount of versicolor = " + str(versicolor)) 
+    print("Amount of virginica = " + str(virginica))
+        
+ObservationsSpecies()         
+
+#IrisDescribe()
+
+
 
 #IrisMean()
 
